@@ -18,7 +18,7 @@ Add the flake input and make it follow the inputs already used by your configura
 
 ```nix
 inputs.everforest = {
-  url = "github:AkinoYuiko/everforest-darwin";
+  url = "github:angribot/everforest-darwin";
   inputs.nixpkgs.follows = "nixpkgs";
   inputs.home-manager.follows = "home-manager";
 };
