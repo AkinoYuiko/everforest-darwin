@@ -1,5 +1,14 @@
-result
-result-*
+# Nix build outputs
+/result
+/result-*
+/.direnv/
+
+# macOS metadata
+.DS_Store
+
+# Python test helpers
 __pycache__/
 *.pyc
-.pi-subagents/
+
+# Local agent scratch data
+/.pi-subagents/
