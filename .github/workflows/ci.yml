@@ -18,14 +18,12 @@ jobs:
     runs-on: macos-latest
     timeout-minutes: 45
     steps:
-      # actions/checkout v5
-      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
+      - uses: actions/checkout@v7
 
       - name: Verify Apple Silicon runner
         run: test "$(uname -m)" = "arm64"
 
-      # cachix/install-nix-action v31
-      - uses: cachix/install-nix-action@7e1d5bdb99afadeb0885b07e3913a4240e12ede5
+      - uses: cachix/install-nix-action@v31
         with:
           install_url: https://releases.nixos.org/nix/nix-2.34.8/install
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
